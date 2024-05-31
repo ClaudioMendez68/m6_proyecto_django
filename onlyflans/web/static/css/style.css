@@ -1,0 +1,36 @@
+body {
+    background-image: url('/static/img/floral-watercolor.jpg')
+}
+
+#navigation {
+    background: #dff5ff;
+}
+
+.navbar {
+    background: #ace2e1;
+    border-radius: 5px;
+}
+
+#header {
+    background: #dff5ff;
+}
+
+.card {
+    width: 21em;
+    box-shadow:0px 0px 3px 0px #b77a47;
+}
+
+.card-body {
+    background-color: #fff6d5;
+}
+
+.list-group-item {
+    background-color: #d49a69; 
+    color: white
+}
+
+#footer {
+    background: #7ac4c3; 
+    color: white; 
+    text-align: center;
+}
