@@ -2,8 +2,8 @@ body {
     background-image: url('/static/img/floral-watercolor.jpg')
 }
 
-#navigation {
-    background: #dff5ff;
+#header img{
+    width: 23em;
 }
 
 .navbar {
@@ -11,13 +11,13 @@ body {
     border-radius: 5px;
 }
 
-#header {
-    background: #dff5ff;
-}
-
 .card {
     width: 21em;
     box-shadow:0px 0px 3px 0px #b77a47;
+}
+
+.card-title {
+    text-align: center;
 }
 
 .card-body {
@@ -25,8 +25,18 @@ body {
 }
 
 .list-group-item {
-    background-color: #d49a69; 
-    color: white
+    background-color: #fff6d5; 
+}
+
+#foto-familiar {
+    border-radius: 15px;
+    box-shadow:0px 0px 3px 0px #b77a47;
+}
+
+.texto {
+    background-color: #fff6d5;
+    border-radius: 15px;
+    box-shadow:0px 0px 3px 0px #b77a47;
 }
 
 #footer {
