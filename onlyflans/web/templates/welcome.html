@@ -1,7 +1,29 @@
 {% extends 'base.html'%}
 
 {% block 'content' %}
-    <div style="text-align: center" class = 'container'>
-        BIENVENIDO CLIENTE
+<section>
+    <div class="container py-3 px-3">
+        <h2 class="text-center">Nuestros Productos</h2>
+        <div class="row gx-3 gy-3">
+            {% for flan in flanes_privados %}
+            <div class="col-12 col-md-6 col-lg-4">                
+                <div class="card">
+                    <img src="{{flan.image_url}}" class="card-img-top" alt="{{flan.slug}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{flan.name}}</h5>
+                        <p class="card-text">{{flan.description}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">An item</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>            
+            </div>
+            {% endfor %}
+        </div>
     </div>
+</section>
 {% endblock  %}

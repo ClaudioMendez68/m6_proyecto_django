@@ -11,9 +11,18 @@ body {
     border-radius: 5px;
 }
 
+#formulario {
+    width: 20em;
+    padding: 0em 1em;
+}
+
 .card {
     width: 21em;
     box-shadow:0px 0px 3px 0px #b77a47;
+}
+
+.card img {
+    height: 18em;
 }
 
 .card-title {
@@ -22,6 +31,10 @@ body {
 
 .card-body {
     background-color: #fff6d5;
+}
+
+.card-text {
+    height: 12em;
 }
 
 .list-group-item {
@@ -34,6 +47,15 @@ body {
 }
 
 .texto {
+    background-color: #fff6d5;
+    border-radius: 15px;
+    box-shadow:0px 0px 3px 0px #b77a47;
+}
+
+.success {
+    width: 41em;
+    margin-top: 4em;
+    padding: 3em 0em;
     background-color: #fff6d5;
     border-radius: 15px;
     box-shadow:0px 0px 3px 0px #b77a47;
