@@ -7,6 +7,7 @@ class Flan(models.Model):
     name = models.CharField(max_length=64)
     description = models.TextField()
     image_url = models.URLField()
+    price = models.CharField(max_length=12, default='$ 0')
     slug = models.SlugField()
     is_private = models.BooleanField()
     created_at = models.DateTimeField(auto_now_add=True)

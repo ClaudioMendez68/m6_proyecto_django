@@ -1,6 +1,9 @@
-from django.shortcuts import render, HttpResponseRedirect
+from django.shortcuts import render, HttpResponseRedirect, redirect
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from .models import Flan, ContactForm
-from web.forms import ContactFormModelForm
+from .forms import ContactFormModelForm, CustomUserCreationForm
 
 # Create your views here.
 def indice(request):
@@ -15,6 +18,7 @@ def indice(request):
 def about(request):
     return render(request, 'about.html')
 
+@login_required
 def welcome(request):
     flanes_privados = Flan.objects.filter(is_private=True)
     context = {
@@ -43,5 +47,45 @@ def exito(request):
 def login(request):
     return render(request, 'login.html')
 
+def registro(request):
+    data = {
+        'form': CustomUserCreationForm()
+    }
+
+    if request.method == 'POST':
+        user_creation_form = CustomUserCreationForm(data=request.POST)
+
+        if user_creation_form.is_valid():
+            user_creation_form.save()
+
+            user = authenticate(username=user_creation_form.cleaned_data['username'], password=user_creation_form.cleaned_data['password1'])
+            login(request, user)
+            return redirect('/bienvenido/')
+        else:
+            data['form'] = user_creation_form
+
+    return render(request, 'registro.html', data)
+'''
+def registro(request):
+    data = {
+        'form': CustomUserCreationForm()
+    }
+
+    if request.method == 'POST':
+        user_creation_form = CustomUserCreationForm(data=request.POST)
+
+        if user_creation_form.is_valid():
+            user_creation_form.save()
+
+            user = authenticate(username=user_creation_form.cleaned_data['username'], password=user_creation_form.cleaned_data['password1'])
+            login(request, user)
+            return redirect('/bienvenido/')
+        else:
+            data['form'] = user_creation_form
+
+    return render(request, 'registration/register.html', data)
+    
+'''
+
 def logout(request):
-    return render(request, 'logout.html')
+    return HttpResponseRedirect('/')

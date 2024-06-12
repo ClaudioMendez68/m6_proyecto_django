@@ -3,7 +3,10 @@
 {% block 'content' %}
 <section>
     <div class="container py-3 px-3">
-        <h2 class="text-center">Nuestros Productos</h2>
+        <div class="row mx-auto col-3 text-center justify-content-center ">
+            <h2 class="text-center text-primary-emphasis mt-2 mb-4 py-3 border border-dark rounded welcome">Bienvenido {{user.get_username}}</h2>
+        </div>
+        <h2 class="text-center mb-3">Nuestras Especialidades</h2>
         <div class="row gx-3 gy-3">
             {% for flan in flanes_privados %}
             <div class="col-12 col-md-6 col-lg-4">                
@@ -14,11 +17,10 @@
                         <p class="card-text">{{flan.description}}</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item fs-3">{{flan.price}}</li>
                     </ul>
                     <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+                        <a href="#" class="card-link btn btn-primary">Comprar</a>
                     </div>
                 </div>            
             </div>

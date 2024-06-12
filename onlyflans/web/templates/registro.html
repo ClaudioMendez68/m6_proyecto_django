@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block 'content' %}
+<div class="container">
+    <div class="row">
+        <div class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-3 col-md-6 offset-lg-4 col-lg-4 text-center register">
+            <h3 class="text-center mt-2">Registro de Usuario</h3>
+            <form id="register-form" action="" method="post">
+                {% csrf_token %}
+                <div class="fieldWrapper p-2">
+                    <label class="form-label" for="form.username.id_for_label">Nombre de Usuario</label>
+                    <div class="campo">{{ form.username }}</div>
+                    <span class="text-danger">{{ form.username.errors }}</span>
+                </div>
+                <div class="fieldWrapper p-2">
+                    <label class="form-label" for="form.email.id_for_label">Correo Electrónico</label>
+                    <div class="campo">{{ form.email }}</div>
+                    <span class="text-danger">{{ form.email.errors }}</span>
+                </div>
+                <div class="fieldWrapper p-2">
+                    <label class="form-label" for="form.password.id_for_label">Escriba su Password</label>
+                    <div class="campo">{{ form.password1 }}</div>
+                    <span class="text-danger">{{ form.password1.errors }}</span>
+                </div>
+                <div class="fieldWrapper p-2 mb-3">
+                    <label class="form-label" for="form.password.id_for_label">Repita su Password</label>
+                    <div class="campo">{{ form.password2 }}</div>
+                    <span class="text-danger">{{ form.password2.errors }}</span>
+                </div>
+                <div class="mb-3">
+                    <input class="btn btn-primary" type='submit' value='Registrarse'>            
+                </div>            
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

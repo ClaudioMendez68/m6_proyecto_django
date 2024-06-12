@@ -1,18 +1,30 @@
 {% extends 'base.html'%}
 {% load static%}
 {% block 'content' %}
-<div style="text-align: center;" class = 'container'>
-    <h2>ACERCA DE NOSOTROS</h2>
-    <div class="row py-3">
+<div class = "container">
+    <h2 class="my-4" style="text-align: center;">ACERCA DE NOSOTROS</h2>
+    <div class="row py-2">
+        <div class="col-sm-12 col-md-5 mb-2">
+            <img id="foto-familiar" src={% static 'img/familia-vendiendo-flanes.jpg' %} alt="foto-familia" class="img-fluid">
+        </div>
+        <div class="col-sm-12 col-md-7 mb-2 texto">
+            <p class="fs-5 mt-3 mx-2">
+                Había una vez en un pequeño pueblo llamado San Martín, una familia que era famosa por sus flanes exquisitos. La tradición comenzó con los abuelos, Don Rafael y Doña Isabel, quienes con amor y dedicación crearon una receta secreta que se convirtió en el deleite de todos los habitantes del lugar.
+
+                Don Rafael había aprendido a cocinar de su madre, una mujer sencilla pero con un talento especial para los postres. Junto a Doña Isabel, perfeccionaron la receta del flan, dándole ese toque único que lo hacía inigualable. Cada fin de semana, la casa de los abuelos se llenaba de aromas dulces y tentadores que atraían a vecinos y forasteros por igual.
+                
+                Pasaron los años y los flanes de Don Rafael y Doña Isabel se volvieron tan populares que decidieron abrir una pequeña tienda en el centro del pueblo. Fue un éxito rotundo. La gente venía de todas partes solo para probar esos flanes dorados y suaves, con un caramelo que se derretía en la boca.
+            </p>
+        </div>
+    </div>
+    <div class="row py-2">
         <div class="col-sm-12 col-md-5 mb-2">
             <img id="foto-familiar" src={% static 'img/flanes-familia.jpg' %} alt="foto-familia" class="img-fluid">
         </div>
         <div class="col-sm-12 col-md-7 mb-2 texto">
-            <p class="fs-5">
-                OnlyFlans es una empresa enfocada en el mundo de la pastelería y los postres, en especial
-            en la venta de flan(de ahí su nombre), nace en 2021 en Santiago de Chile como una empresa
-            familiar que pretende entregar productos de calidad a su clientela, estando ubicada en
-            Providencia, a pasos del metro Parque Bustamante.
+            <p class="fs-5 mt-3 mx-2">
+                La tradición continuó con sus hijos, Miguel y Ana, quienes aprendieron los secretos de la receta desde pequeños. Miguel, en particular, desarrolló una pasión profunda por la cocina y, al crecer, tomó las riendas del negocio familiar. Bajo su gestión, la tienda no solo mantuvo la calidad de los flanes, sino que también innovó con nuevos sabores y presentaciones, siempre respetando la esencia de la receta original.
+                Ahora, Miguel tenía un hijo llamado Javier. Desde muy pequeño, Javier había mostrado un interés especial por la cocina. Le encantaba pasar tiempo en la tienda de sus padres, observando cómo preparaban los flanes y ayudando en lo que podía. Miguel veía en su hijo la misma pasión que él había tenido y comenzó a enseñarle todos los secretos de la receta familiar.
             </p>
         </div>
     </div>
